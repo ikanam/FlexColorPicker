@@ -55,7 +55,7 @@ open class ColorPickerThumbView: UIViewWithCommonInit {
     public var showPercentage: Bool = true
     /// Whether the thumb view should be expanded when user is interacting with it.
     public var expandOnTap: Bool = true
-    var delegate: LimitedGestureViewDelegate? {
+    weak var delegate: LimitedGestureViewDelegate? {
         didSet {
             (borderView as? LimitedGestureCircleView)?.delegate = delegate
             (colorView as? LimitedGestureCircleView)?.delegate = delegate
